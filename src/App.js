@@ -1,7 +1,12 @@
 import './App.css';
+import CommentCard from './components/CommentCard';
 
 function App() {
-  return <div className="App">ZING!</div>;
+  return (
+    <div className="container">
+      <CommentCard />
+    </div>
+  );
 }
 
 export default App;
