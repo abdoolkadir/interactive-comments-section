@@ -1,15 +1,11 @@
 import CommentCard from './CommentCard';
-import CommentContext from '../context/CommentsContext';
-import { useContext } from 'react';
 
-function Reply() {
-  const { comments } = useContext(CommentContext);
+function Reply({ replies }) {
   return (
     <div className="comment-reply">
       <div className="reply">
-        {comments.map(({ replies }) =>
-          replies.map((reply) =>
-            replies.length > 0 ? (
+        {replies.length > 0 ? (
+            replies.map((reply) => (
               <CommentCard
                 key={reply.id}
                 image={reply.user.image.webp}
@@ -18,9 +14,9 @@ function Reply() {
                 timestamp={reply.createdAt}
                 score={reply.score}
               />
-            ) : null
+            ))
           )
-        )}
+            : <p>No replies yet</p>}
       </div>
     </div>
   );

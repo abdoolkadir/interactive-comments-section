@@ -17,7 +17,7 @@ function Comments() {
             timestamp={comment.createdAt}
             score={comment.score}
           />
-          <Reply />
+          <Reply replies={comment.replies}/>
         </div>
       ))}
     </div>
