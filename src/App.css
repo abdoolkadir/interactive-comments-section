@@ -62,8 +62,9 @@ a {
 .comment-card {
   display: flex;
   background-color: var(--White);
-  padding: 1.5em 1em;
-  border-radius: 5px;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
 }
 
 .comment-area {
@@ -104,4 +105,17 @@ a {
   font-weight: 600;
   color: var(--Grayish-Blue);
   padding: 5px;
+}
+
+.comment-reply {
+  margin: 1.5em 0;
+  display: flex;
+  place-content: space-between;
+  padding-left: 2em;
+}
+
+.comment-reply .reply {
+  margin-bottom: 1.5em;
+  border-left: 1px solid var(--Light-gray);
+  padding-left: 2em;
 }

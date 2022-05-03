@@ -1,11 +1,16 @@
 import './App.css';
 import CommentCard from './components/CommentCard';
+import Comments from './components/Comments';
+import { CommentsProvider } from './context/CommentsContext';
 
 function App() {
   return (
-    <div className="container">
-      <CommentCard />
-    </div>
+    <CommentsProvider>
+      <div className="container">
+        <Comments />
+        {/* <CommentCard /> */}
+      </div>
+    </CommentsProvider>
   );
 }
 
