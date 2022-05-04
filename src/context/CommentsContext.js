@@ -1,9 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
 import { createContext, useState } from 'react';
 
 const CommentContext = createContext();
 
 export const CommentsProvider = ({ children }) => {
-  const [comments, setComment] = useState([
+  const [commentData, setCommentData] = useState([
     {
       id: 1,
       content:
@@ -82,9 +83,29 @@ export const CommentsProvider = ({ children }) => {
       ]
     }
   ]);
+  const [currentUser, setCurrentUser] = useState([
+    {
+      currentUser: {
+        image: {
+          png: './assets/images/avatars/image-juliusomo.png',
+          webp: './assets/images/avatars/image-juliusomo.webp'
+        },
+        username: 'juliusomo'
+      }
+    }
+  ]);
+
+  // Add Comment
+  const addComment = (newComment) => {
+    newComment.id = uuidv4();
+    // newComment.image = currentUser.
+    console.log(newComment);
+
+    setCommentData([...commentData, newComment]);
+  };
 
   return (
-    <CommentContext.Provider value={{ comments }}>
+    <CommentContext.Provider value={{ commentData, currentUser, addComment }}>
       {children}
     </CommentContext.Provider>
   );

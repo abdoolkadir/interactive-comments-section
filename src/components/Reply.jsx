@@ -6,9 +6,8 @@ function Reply({ replies }) {
       {replies.length > 0 && (
         <div className="comment-reply">
           {replies.map((reply) => (
-            <div className="reply">
+            <div className="reply" key={reply.id}>
               <CommentCard
-                key={reply.id}
                 image={reply.user.image.webp}
                 username={reply.user.username}
                 comment={reply.content}

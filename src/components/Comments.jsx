@@ -4,13 +4,12 @@ import CommentContext from '../context/CommentsContext';
 import Reply from './Reply';
 
 function Comments() {
-  const { comments } = useContext(CommentContext);
+  const { commentData } = useContext(CommentContext);
   return (
     <div className="comments-container">
-      {comments.map((comment) => (
-        <div className="comment-container">
+      {commentData.map((comment) => (
+        <div className="comment-container" key={comment.id}>
           <CommentCard
-            key={comment.id}
             image={comment.user.image.webp}
             username={comment.user.username}
             comment={comment.content}

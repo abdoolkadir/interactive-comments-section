@@ -26,6 +26,60 @@ a {
   text-decoration: none;
 }
 
+.add-comment-form {
+  border-radius: 10px;
+  background: var(--White);
+  padding: 2em;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.add-comment-form textarea {
+  border: 1px solid var(--Light-gray);
+  color: var(--Grayish-Blue);
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 85%;
+  height: 100px;
+  padding: 1em;
+  margin: 0 1em;
+  resize: none;
+}
+
+.add-comment-form textarea::placeholder {
+  color: var(--Grayish-Blue);
+  font-weight: 500;
+}
+
+.add-comment-form img {
+  width: 40px;
+}
+
+.btn {
+  background: var(--Moderate-blue);
+  color: var(--White);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--Light-grayish-blue);
+}
+
+.btn:disabled {
+  background-color: var(--Light-gray);
+  color: var(--Dark-blue);
+  cursor: auto;
+}
+
 .btn-plus,
 .btn-minus {
   background: transparent;
@@ -46,10 +100,14 @@ a {
 }
 
 .container {
-  border: 1px solid red;
   max-width: 768px;
   margin: auto;
   padding: 4em 2em;
+}
+
+.comment {
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .comment,
@@ -69,6 +127,7 @@ a {
 
 .comment-area {
   padding: 0 15px;
+  width: 100%;
 }
 
 .comment-header {

@@ -1,4 +1,5 @@
 import './App.css';
+import AddCommentForm from './components/AddCommentForm';
 import CommentCard from './components/CommentCard';
 import Comments from './components/Comments';
 import { CommentsProvider } from './context/CommentsContext';
@@ -8,7 +9,7 @@ function App() {
     <CommentsProvider>
       <div className="container">
         <Comments />
-        {/* <CommentCard /> */}
+        <AddCommentForm />
       </div>
     </CommentsProvider>
   );
