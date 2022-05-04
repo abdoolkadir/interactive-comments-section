@@ -109,13 +109,11 @@ a {
 
 .comment-reply {
   margin: 1.5em 0;
-  display: flex;
-  place-content: space-between;
-  padding-left: 2em;
+  border-left: 2px solid var(--Light-gray);
+  margin-left: 2em;
 }
 
 .comment-reply .reply {
   margin-bottom: 1.5em;
-  border-left: 1px solid var(--Light-gray);
   padding-left: 2em;
 }

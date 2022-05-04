@@ -2,10 +2,11 @@ import CommentCard from './CommentCard';
 
 function Reply({ replies }) {
   return (
-    <div className="comment-reply">
-      <div className="reply">
-        {replies.length > 0 ? (
-            replies.map((reply) => (
+    <>
+      {replies.length > 0 && (
+        <div className="comment-reply">
+          {replies.map((reply) => (
+            <div className="reply">
               <CommentCard
                 key={reply.id}
                 image={reply.user.image.webp}
@@ -14,11 +15,11 @@ function Reply({ replies }) {
                 timestamp={reply.createdAt}
                 score={reply.score}
               />
-            ))
-          )
-            : <p>No replies yet</p>}
-      </div>
-    </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 export default Reply;
